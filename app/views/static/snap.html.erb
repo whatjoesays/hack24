@@ -1,4 +1,30 @@
-Your pic:
+
+<div class="swatch swatch-vert" data-for=".overlay-hat">
+  <div class="item"><img src="<%= asset_path 'potatochunks/hat1.png' %>"></div>
+  <div class="item"><img src="<%= asset_path 'potatochunks/hat2.png' %>"></div>
+  <div class="item"><img src="<%= asset_path 'potatochunks/hat3.png' %>"></div>
+</div>
+
+<div class="swatch swatch-vert" data-for=".overlay-eye">
+  <div class="item"><img src="<%= asset_path 'potatochunks/eye1.png' %>"></div>
+</div>
+
+<div class="your-face">
+  <img src="<%= @uri %>">
+  <div class="overlay overlay-hat"></div>
+  <div class="overlay overlay-eye"></div>
+  <div class="overlay overlay-mouth"></div>
+  <div class="overlay overlay-neck"></div>
+</div>
+
+<div class="swatch swatch-vert" data-for=".overlay-mouth">
+  <div class="item"><img src="<%= asset_path 'potatochunks/mouth1.png' %>"></div>
+</div>
+
+<div class="swatch swatch-vert" data-for=".overlay-neck">
+  <div class="item"><img src="<%= asset_path 'potatochunks/neck1.png' %>"></div>
+</div>
+
 <div>
-<img src="<%= @uri %>" style="width:300px; height: auto">
+  <button>Big save button</button>
 </div>

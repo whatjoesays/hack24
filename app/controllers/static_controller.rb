@@ -1,6 +1,8 @@
 require 'base64'
 
 class StaticController < ActionController::Base
+  layout 'application' # what. the. hell.
+
   def test
   end
 
