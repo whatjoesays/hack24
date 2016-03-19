@@ -11,11 +11,9 @@ gem 'pg', group: :production
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
-gem 'face'
+gem 'face', :git => 'git://github.com/rociiu/face.git'
 # https://skybiometry.com/documentation/
 # https://manage.skybiometry.com/Account/Index
-# client = Face.get_client(api_key: Rails.env['FACE_KEY'], api_secret: Rails.env['FACE_SECRET'])
-# client.faces_detect(file: File.new('image.jpg', 'rb'))
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

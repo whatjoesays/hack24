@@ -8,6 +8,7 @@ $(function($){
     $('.your-face .overlay').empty();
     $('.swatch .item.active').each(function(){
       $($(this).closest('.swatch').data('for')).html( $(this).html() );
+      $('input[name="choice['+$(this).data('for').split('-')[1]+']"]').val($(this).index('.item'));
     });
   });
 });

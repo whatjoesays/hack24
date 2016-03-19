@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/rociiu/face.git
+  revision: f3d28a1112513ccb70d61da1381432b5ad44f4ee
+  specs:
+    face (0.1.0)
+      json (>= 1.4.6)
+      rest-client (>= 1.6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,9 +66,6 @@ GEM
       railties (~> 4.0)
     erubis (2.7.0)
     execjs (2.6.0)
-    face (0.1.0)
-      json (>= 1.4.6)
-      rest-client (>= 1.6.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     http-cookie (1.0.2)
@@ -165,7 +170,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   dotenv-rails
-  face
+  face!
   jbuilder (~> 2.0)
   jquery-rails
   pg

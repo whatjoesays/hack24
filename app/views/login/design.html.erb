@@ -3,5 +3,9 @@
 <%= render 'common/customiser' %>
 
 <%= form_tag(action: :do_save) do %>
+  <input type="hidden" name="choice[hat]" value="">
+  <input type="hidden" name="choice[eye]" value="">
+  <input type="hidden" name="choice[mouth]" value="">
+  <input type="hidden" name="choice[neck]" value="">
   <button type="submit">I am ready!</button>
 <% end %>
