@@ -7,7 +7,7 @@
     <li>(Camera)</li>
     <!-- <li><a href="photo-valid.php">Photo - Valid</a></li> -->
     <li><a href="edit-complement.php">Edit - Complement</a></li>
-    <li><a href="edit-twist.php">Edit - Twist</a></li>
+    <!-- <li><a href="edit-twist.php">Edit - Twist</a></li> -->
     <li><a href="edit-default.php">Edit - Default</a></li>
     <li><a href="edit-options.php">Edit - Options</a></li>
     <li><a href="edit-progress.php">Edit - Progress</a></li>

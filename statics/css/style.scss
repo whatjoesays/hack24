@@ -73,8 +73,8 @@ body {
 .header__logo {
     display: block;
     margin: 0 auto;
-    width: 80px;
-    height: 40px;
+    width: 40px;
+    height: 20px;
 }
 
 .back {
@@ -85,7 +85,9 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        padding: $half-spacing;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
     }
 }
 
@@ -195,8 +197,54 @@ body {
 
 // Editor
 
-.editor {}
+.editor {
+    position: relative;
+}
 
 .editor__image {
+    display: block;
     width: 100%;
+}
+
+.controls {
+    @include list-reset;
+    @include clearfix;
+    @include font-size(14px);
+
+    li {
+        float: left;
+        width: 25%;
+        border-right: 1px solid #333;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    a {
+        display: block;
+        padding: $base-spacing $half-spacing;
+        text-decoration: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: $base-spacing;
+    width: 75%;
+    background: $char;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($black, 0.5);
 }

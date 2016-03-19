@@ -16,11 +16,4 @@ $body_class = 'editor';
     <li><a href="#">Neck</a></li>
 </ul>
 
-<div class="overlay">
-    <h1 class="screen-title">Looking good&hellip;</h1>
-    <p>We just need to add some finishing touches.</p>
-    <a class="button" href="edit-default.php">Personalise</a>
-</div>
-<div class="mask"></div>
-
 <?php include '_foot.php'; ?>
