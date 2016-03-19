@@ -1,13 +1,3 @@
-<div class="swatch swatch-vert" data-for=".overlay-hat">
-  <div class="item"><img src="<%= asset_path 'potatochunks/hat1.png' %>"></div>
-  <div class="item"><img src="<%= asset_path 'potatochunks/hat2.png' %>"></div>
-  <div class="item"><img src="<%= asset_path 'potatochunks/hat3.png' %>"></div>
-</div>
-
-<div class="swatch swatch-vert" data-for=".overlay-eye">
-  <div class="item"><img src="<%= asset_path 'potatochunks/eye1.png' %>"></div>
-</div>
-
 <div class="your-face">
   <img src="<%= @uri %>" alt="You!">
   <div class="overlay overlay-hat"></div>
@@ -16,10 +6,15 @@
   <div class="overlay overlay-neck"></div>
 </div>
 
-<div class="swatch swatch-vert" data-for=".overlay-mouth">
-  <div class="item"><img src="<%= asset_path 'potatochunks/mouth1.png' %>"></div>
-</div>
-
-<div class="swatch swatch-vert" data-for=".overlay-neck">
-  <div class="item"><img src="<%= asset_path 'potatochunks/neck1.png' %>"></div>
-</div>
+<ul class="swoptions">
+  <% ['hat', 'eye', 'mouth', 'neck'].each do |zone| %>
+  <li>
+    <a href="#"><%= zone.capitalize %></a>
+    <div class="swatch" data-for=".overlay-<%= zone %>">
+      <% Dir["app/assets/images/potatochunks/#{zone}*"].each do |url| %>
+        <div class="item"><img src="<%= asset_url url.split('/')[-2..-1].join('/') %>"></div>
+      <% end %>
+    </div>
+  </li>
+  <% end %>
+</ul>
