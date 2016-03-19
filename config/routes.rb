@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static#test'
 
+  post '/snap' => 'static#snap'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
