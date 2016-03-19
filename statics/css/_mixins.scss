@@ -1,0 +1,53 @@
+// MIXINS
+
+@mixin hover {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    zoom: 1;
+}
+
+@mixin media($type, $breakpoint) {
+    @if $type == "min" {
+        @media only screen and (min-width: $breakpoint) { @content }
+    }
+    @else if $type == "max" {
+        @media only screen and (max-width: $breakpoint - 1px) { @content }
+    }
+}
+
+@mixin unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin font-size($font-size){
+    font-size:  $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+    // line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+}
+
+@mixin list-reset(){
+    margin-left: 0;
+    list-style: none;
+}
+
+@mixin font-smooth(){
+    -webkit-font-smoothing: antialiased;
+}

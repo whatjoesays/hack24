@@ -1,0 +1,157 @@
+// STYLE
+
+
+// Imports
+
+@import "mixins";
+@import "vars";
+@import "reset";
+@import "reboot";
+
+form {
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: $half-spacing $base-spacing;
+    font-weight: bold;
+    text-decoration: none;
+    background: $white;
+    color: $red2;
+    white-space: nowrap;
+    border-radius: $half-spacing;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    .button & {
+        margin-right: 5px;
+    }
+}
+
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+
+// Root
+
+body {
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+
+    background: #c65c4f;
+    background: -moz-linear-gradient(top,  #c65c4f 0%, #aa405c 50%, #8e256a 100%);
+    background: -webkit-linear-gradient(top,  #c65c4f 0%,#aa405c 50%,#8e256a 100%);
+    background: linear-gradient(to bottom,  #c65c4f 0%,#aa405c 50%,#8e256a 100%);
+    color: $white;
+}
+
+
+// Header
+
+.header {
+    padding: $base-spacing;
+}
+
+.header__logo {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 40px;
+}
+
+
+// Footer
+
+.footer {
+    position: fixed;
+    padding: $base-spacing;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    @include font-size(14px);
+}
+
+
+// Content
+
+.content {
+    padding: 0 $base-spacing;
+}
+
+
+// Account
+
+.account {
+    // border: 2px solid rgba($black, 0.25);
+    // padding: $base-spacing;
+    text-align: center;
+    // border-radius: $half-spacing;
+}
+
+.account__photo {
+    position: relative;
+    margin-bottom: $half-spacing;
+
+    .button {
+        // position: absolute;
+        // left: 0;
+        // bottom: $base-spacing;
+    }
+}
+
+.photo__image {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid $white;
+    width: (300px * 0.8);
+    height: (400px * 0.8);
+
+    background: $black;
+    box-shadow: 0 0 10px rgba($black, 0.25);
+}
+
+.photo__actions {
+    position: absolute;
+    bottom: (2 * $base-spacing);
+    left: 0;
+    width: 100%;
+}
+
+.account__name {
+    margin-bottom: 0;
+    font-weight: normal;
+    @include font-size(36px);
+    // font-family: $serif;
+}
+
+.account__id {
+    margin-bottom: 0;
+    @include font-size(18px);
+}
+
+
+// Screen
+
+.screen-title {
+    margin-bottom: $half-spacing;
+    // font-weight: normal;
+    @include font-size(24px);
+    // font-family: $serif;
+}
+
+.escape {
+    padding-top: $base-spacing;
+    @include font-size(14px);
+}
