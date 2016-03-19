@@ -6,8 +6,17 @@ ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
+gem 'face'
+# https://skybiometry.com/documentation/
+# https://manage.skybiometry.com/Account/Index
+# client = Face.get_client(api_key: Rails.env['FACE_KEY'], api_secret: Rails.env['FACE_SECRET'])
+# client.faces_detect(file: File.new('image.jpg', 'rb'))
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

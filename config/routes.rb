@@ -3,9 +3,21 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static#test'
+  root 'pages#index'
 
-  post '/snap' => 'static#snap'
+  namespace :signup do
+    get 'initial'
+    get 'photo'
+    post 'design'
+    post 'do_save'
+  end
+
+  namespace :login do
+    get 'initial'
+    get 'photo'
+    post 'design'
+    post 'do_save'
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
