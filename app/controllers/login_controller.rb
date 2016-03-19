@@ -19,10 +19,15 @@ class LoginController < ActionController::Base
 
   def do_save
     # check everything matches!
-    if false
+    pin_matches = params[:choice][:hat] == USER_TABLE[0][:pin][0] &&
+       params[:choice][:eye] == USER_TABLE[0][:pin][1] &&
+       params[:choice][:mouth] == USER_TABLE[0][:pin][2] &&
+       params[:choice][:neck] == USER_TABLE[0][:pin][3]
+
+    if pin_matches
       render 'success'
     else
-      @error = "Unrecognised face!"
+      @error = "I don't recognise your get-up!"
       render 'initial'
     end
   end
