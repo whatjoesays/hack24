@@ -1,0 +1,250 @@
+// STYLE
+
+
+// Imports
+
+@import "mixins";
+@import "vars";
+@import "reset";
+@import "reboot";
+
+form {
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: $half-spacing $base-spacing;
+    font-weight: bold;
+    text-decoration: none;
+    background: $white;
+    color: $red2;
+    white-space: nowrap;
+    border-radius: $half-spacing;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    .button & {
+        margin-right: 5px;
+    }
+}
+
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+
+// Root
+
+body {
+    position: relative;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+
+    background: #c65c4f;
+    background: -moz-linear-gradient(top,  #c65c4f 0%, #aa405c 50%, #8e256a 100%);
+    background: -webkit-linear-gradient(top,  #c65c4f 0%,#aa405c 50%,#8e256a 100%);
+    background: linear-gradient(to bottom,  #c65c4f 0%,#aa405c 50%,#8e256a 100%);
+    color: $white;
+
+    &.editor {
+        background: $black;
+    }
+}
+
+
+// Header
+
+.header {
+    position: relative;
+    padding: $base-spacing;
+}
+
+.header__logo {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 20px;
+}
+
+.back {
+    display: none;
+
+    .editor & {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+
+// Footer
+
+.footer {
+    position: fixed;
+    padding: $base-spacing;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    @include font-size(14px);
+}
+
+
+// Splash
+
+.splash {
+    padding-top: 50%;
+}
+
+.splash__logo {
+    display: inline-block;
+    width: 160px;
+}
+
+.splash__title {
+    @include font-size(24px);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+
+// Content
+
+.content {
+    padding: $base-spacing;
+}
+
+
+// Account
+
+.account {
+    // border: 2px solid rgba($black, 0.25);
+    // padding: $base-spacing;
+    text-align: center;
+    // border-radius: $half-spacing;
+}
+
+.account__photo {
+    position: relative;
+    margin-bottom: $half-spacing;
+
+    .button {
+        // position: absolute;
+        // left: 0;
+        // bottom: $base-spacing;
+    }
+}
+
+.photo__image {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid $white;
+    width: (300px * 0.8);
+    height: (400px * 0.8);
+
+    background: $black;
+    box-shadow: 0 0 10px rgba($black, 0.25);
+}
+
+.photo__actions {
+    position: absolute;
+    bottom: (2 * $base-spacing);
+    left: 0;
+    width: 100%;
+}
+
+.account__name {
+    margin-bottom: 0;
+    font-weight: normal;
+    @include font-size(36px);
+    // font-family: $serif;
+}
+
+.account__id {
+    margin-bottom: 0;
+    @include font-size(18px);
+}
+
+
+// Screen
+
+.screen-title {
+    margin-bottom: $half-spacing;
+    // font-weight: normal;
+    @include font-size(24px);
+    // font-family: $serif;
+}
+
+.escape {
+    padding-top: $base-spacing;
+    @include font-size(14px);
+}
+
+
+// Editor
+
+.editor {
+    position: relative;
+}
+
+.editor__image {
+    display: block;
+    width: 100%;
+}
+
+.controls {
+    @include list-reset;
+    @include clearfix;
+    @include font-size(14px);
+
+    li {
+        float: left;
+        width: 25%;
+        border-right: 1px solid #333;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    a {
+        display: block;
+        padding: $base-spacing $half-spacing;
+        text-decoration: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: $base-spacing;
+    width: 75%;
+    background: $char;
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($black, 0.5);
+}

@@ -1,0 +1,6 @@
+// HELPERS
+
+.clearfix,
+.cf {
+    @include clearfix();
+}

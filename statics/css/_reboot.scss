@@ -1,0 +1,96 @@
+// Reboot
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 100%;
+    font: #{($base-font-size/16px)*100%}/#{$base-line-height} $base-font-family;
+
+    // @include media-query(max, $desk-start) {
+    //     &.nav-open {
+    //         position: fixed;
+    //     }
+    // }
+}
+
+body {
+    position: relative;
+    max-width: 100%;
+    background: $base-background;
+    color: $base-color;
+    text-rendering: optimizeLegibility;
+
+    // @include media-query(max, $desk-start) {
+    //     &.nav-open {
+    //         position: fixed;
+    //     }
+    // }
+}
+
+a {
+    color: $link;
+    transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, hgroup,
+p, blockquote, address,
+ul, ol, dl,
+table,
+fieldset, figure, figcaption, details,
+pre {
+    margin-bottom: $base-spacing;
+}
+
+// HEADINGS
+
+// PARAGRAPHS
+
+// QUOTES
+
+// PRE
+
+// LISTS
+
+img,
+video,
+embed,
+canvas {
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+
+// TABLES
+
+// INLINE
+
+label,
+input,
+textarea,
+button,
+select,
+option {
+    cursor:pointer;
+}
+
+label {
+    display: block;
+
+}
+
+button,
+input,
+select,
+textarea {
+    outline: none;
+    vertical-align: middle;
+    // line-height: $base-spacing;
+}
