@@ -7,4 +7,4 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="<?= $body_class; ?>">

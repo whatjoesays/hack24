@@ -47,6 +47,7 @@ input[type="file"] {
 // Root
 
 body {
+    position: relative;
     text-align: center;
     -webkit-font-smoothing: antialiased;
 
@@ -55,20 +56,37 @@ body {
     background: -webkit-linear-gradient(top,  #c65c4f 0%,#aa405c 50%,#8e256a 100%);
     background: linear-gradient(to bottom,  #c65c4f 0%,#aa405c 50%,#8e256a 100%);
     color: $white;
+
+    &.editor {
+        background: $black;
+    }
 }
 
 
 // Header
 
 .header {
+    position: relative;
     padding: $base-spacing;
 }
 
 .header__logo {
     display: block;
     margin: 0 auto;
-    width: 120px;
+    width: 80px;
     height: 40px;
+}
+
+.back {
+    display: none;
+
+    .editor & {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: $half-spacing;
+    }
 }
 
 
@@ -84,10 +102,28 @@ body {
 }
 
 
+// Splash
+
+.splash {
+    padding-top: 50%;
+}
+
+.splash__logo {
+    display: inline-block;
+    width: 160px;
+}
+
+.splash__title {
+    @include font-size(24px);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+
 // Content
 
 .content {
-    padding: 0 $base-spacing;
+    padding: $base-spacing;
 }
 
 
@@ -154,4 +190,13 @@ body {
 .escape {
     padding-top: $base-spacing;
     @include font-size(14px);
+}
+
+
+// Editor
+
+.editor {}
+
+.editor__image {
+    width: 100%;
 }

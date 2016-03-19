@@ -10,10 +10,7 @@ $body_class = 'brand';
     <h1 class="screen-title">Welcome back</h1>
     <div class="account">
         <figure class="account__photo photo">
-            <img class="photo__image" src="img/blank.png" alt="No Photo">
-            <div class="photo__actions">
-                <a class="button" href="photo-permission.php">Add photo login</a>
-            </div>
+            <img class="photo__image" src="img/photo.jpg" alt="Photo">
         </figure>
         <h1 class="account__name">Johnathan Pine</h1>
         <p class="account__id">ID: 84335274</p>

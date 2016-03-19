@@ -1,3 +1,6 @@
+<?php
+$body_class = 'brand';
+?>
 <?php include '_head.php'; ?>
 
 <?php include '_header.php'; ?>
