@@ -6,10 +6,17 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= yield :bodyclass %>">
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<header class="header">
+    <img class="header__logo" src="<%= asset_url 'logo.png' %>" alt="Hack Hoard">
+    <a class="back" href="#" onclick="window.history.back()"><img class="icon" src="<%= asset_url 'ic_chevron_left_white_24px.svg' %>" alt="Back"></a>
+    <%= yield :extrabutton %>
+</header>
+
+
+<div class="notice"><%= notice %></div>
+<div class="alert"><%= alert %></div>
 
 <%= yield %>
 

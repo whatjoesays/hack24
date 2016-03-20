@@ -2,7 +2,23 @@
 <div class="error"><%= @error %></div>
 <% end %>
 
-<h1>Here you would enter your user info</h1>
-username: will<br>
-password: xxx<br>
-<a href="/login/photo">Log in</a>
+
+<div class="content">
+
+    <h1 class="screen-title">Welcome back</h1>
+    <div class="account">
+        <figure class="account__photo photo">
+            <img class="photo__image" src="<%= asset_url 'blank.png' %>" alt="No Photo">
+            <div class="photo__actions">
+                <a class="button" href="/login/photo">Add photo login</a>
+            </div>
+        </figure>
+        <h1 class="account__name">Johnathan Pine</h1>
+        <p class="account__id">ID: 84335274</p>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <a class="button button--subtle" href="/">Sign in with a different account</a>
+</footer>
