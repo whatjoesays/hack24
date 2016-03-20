@@ -11,6 +11,7 @@
   <% ['hat', 'eye', 'mouth', 'neck'].each do |zone| %>
   <li>
     <a href="#"><%= zone.capitalize %></a>
+    <img class="icon" src="<%= asset_url 'ic_check_green_24px.svg' %>" alt="Done">
     <div class="swatch" data-for=".overlay-<%= zone %>">
       <% Dir["app/assets/images/potatochunks/#{zone}*"].each do |url| %>
         <div class="item"><img src="<%= asset_url url.split('/')[-2..-1].join('/') %>"></div>

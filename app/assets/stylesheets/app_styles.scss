@@ -29,6 +29,7 @@ img {
     width: 100%;
     height: 25%;
     text-align: center;
+    pointer-events: none;
     img {
       margin-top: -70px;
       width: 100%;
@@ -50,6 +51,12 @@ img {
 
 .controls {
   > li {
+    .icon {
+      display: none;
+    }
+    &.selected .icon {
+      display: inline-block;
+    }
     .swatch {
       pointer-events: none;
       opacity: 0;
