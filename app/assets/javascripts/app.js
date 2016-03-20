@@ -14,8 +14,8 @@ $(function($){
     $forImg.css({
       'transition': 'none',
       'transform': 'translate('+(selOffset.left-forOffset.left)+'px, '+(selOffset.top-forOffset.top)+'px)',
-      'width': '50px',
-      'height': '50px'
+      'width': '79px',
+      'height': 'auto'
     });
 
     // hide modal

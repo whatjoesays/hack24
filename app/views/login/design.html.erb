@@ -11,5 +11,6 @@
   <input type="hidden" name="choice[eye]" value="">
   <input type="hidden" name="choice[mouth]" value="">
   <input type="hidden" name="choice[neck]" value="">
+  <%= hidden_field_tag 'image_uri', @uri %>
   <button id="confirm" style="display:none" type="submit">I am ready!</button>
 <% end %>

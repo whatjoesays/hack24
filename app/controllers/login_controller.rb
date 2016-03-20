@@ -17,6 +17,7 @@ class LoginController < ActionController::Base
   end
 
   def do_save
+    @uri = params[:image_uri]
     # check everything matches!
     pin_matches = params[:choice][:hat] == USER_TABLE[0][:pin][0].to_s &&
        params[:choice][:eye] == USER_TABLE[0][:pin][1].to_s &&

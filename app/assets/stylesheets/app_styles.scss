@@ -99,10 +99,18 @@ img {
   }
 }
 
-.button {
+.noborder {
   border: none;
 }
 
 body.home .header {
   display: none;
+}
+
+.footer {
+  position: static;
+}
+
+.photo__image {
+  height: auto;
 }
