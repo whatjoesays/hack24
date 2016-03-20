@@ -19,7 +19,7 @@ img {
   }
 }
 
-.editor {
+.editor-photo {
   position: relative;
   width: 400px;
   .editor-overlay {
@@ -101,4 +101,8 @@ img {
 
 .button {
   border: none;
+}
+
+body.home .header {
+  display: none;
 }

@@ -23,7 +23,7 @@ class LoginController < ActionController::Base
        params[:choice][:mouth] == USER_TABLE[0][:pin][2].to_s &&
        params[:choice][:neck] == USER_TABLE[0][:pin][3].to_s
 
-    if pin_matches
+    if true || pin_matches #FAKERY
       render 'success'
     else
       @error = "I don't recognise your get-up!"
@@ -34,7 +34,7 @@ class LoginController < ActionController::Base
   private
 
   def recognise_face
-    return true
+    return true # FAKERY
 
     client = Face.get_client(api_key: ENV['FACE_KEY'], api_secret: ENV['FACE_SECRET'])
     recognised = client.faces_recognize(uids: USER_TABLE[0][:uid], file: @uri)

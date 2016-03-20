@@ -5,7 +5,7 @@ $(function($){
     $(this).toggleClass('active').siblings('.active').removeClass('active');
 
     // redraw all
-    $('.editor').trigger('redraw');
+    $('.editor-photo').trigger('redraw');
 
     // apply transition to destination image
     var selOffset = $(this).offset();
@@ -24,8 +24,8 @@ $(function($){
   });
 
   // render all objects over image
-  $(document).on('redraw', '.editor', function(){
-    $('.editor .editor-overlay').empty();
+  $(document).on('redraw', '.editor-photo', function(){
+    $('.editor-photo .editor-overlay').empty();
     $('.controls > li.selected').removeClass('selected');
     var count = $('.swatch .item.active').each(function(){
       $(this).closest('li').addClass('selected');
