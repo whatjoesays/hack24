@@ -49,16 +49,21 @@ $(function($){
   //https://pixlcore.com/demos/webcamjs/demos/combo.html
   $('#snapphoto').on('click', function(){
     Webcam.snap( function(data_uri) {
-    // shut down camera, stop capturing
-      Webcam.reset();
+      if(typeof data_uri == 'undefined' || data_uri.length == 0){
+        alert('Camera not quite ready - try again in a sec!');
+      } else {
 
-      $('input[name="our_image"]').val(data_uri);
-      //alert(data_uri);
-      setTimeout(function(){
-        $('form').submit();
-      }, 500);
+        $('input[name="our_image"]').val(data_uri);
 
+        // shut down camera, stop capturing
+        Webcam.reset();
 
+        //alert(data_uri);
+        setTimeout(function(){
+          $('form').submit();
+        }, 500);
+
+      }
       //
     } );
     return false;
