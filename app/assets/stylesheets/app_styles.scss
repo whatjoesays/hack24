@@ -9,8 +9,8 @@ img {
     float: left;
     cursor: pointer;
     margin: 5px;
-    width: 50px;
-    height: 50px;
+    width: 83px;
+    height: auto;
     border: 2px solid #eee;
     border-radius: 8px;
     &.active {
@@ -31,7 +31,7 @@ img {
     text-align: center;
     img {
       margin-top: -70px;
-      width: 70%;
+      width: 100%;
       transition: all 1000ms;
     }
   }
@@ -59,12 +59,15 @@ img {
       left: 0;
       height: 100%;
       width: 100%;
-      background: #fff;
+      background: #333;
       overflow: auto;
       transition: all 400ms;
+      .item {
+        background: #fff;
+      }
     }
     &.active .swatch {
-      opacity: 1;
+      opacity: 0.95;
       pointer-events: auto;
     }
   }
