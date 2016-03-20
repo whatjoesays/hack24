@@ -7,7 +7,7 @@ $body_class = 'brand';
 
 <div class="content">
 
-    <h1 class="screen-title">Welcome back</h1>
+    <h1 class="screen-title">Setup account</h1>
     <div class="account">
         <figure class="account__photo photo">
             <img class="photo__image" src="img/blank.png" alt="No Photo">
