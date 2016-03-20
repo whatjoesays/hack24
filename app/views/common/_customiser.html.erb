@@ -1,12 +1,13 @@
-<div class="your-face">
-  <img src="<%= @uri %>" alt="You!">
-  <div class="overlay overlay-hat"></div>
-  <div class="overlay overlay-eye"></div>
-  <div class="overlay overlay-mouth"></div>
-  <div class="overlay overlay-neck"></div>
+
+<div class="editor">
+    <img class="editor__image" src="<%= @uri %>" alt="Photo">
+    <div class="editor-overlay overlay-hat"></div>
+    <div class="editor-overlay overlay-eye"></div>
+    <div class="editor-overlay overlay-mouth"></div>
+    <div class="editor-overlay overlay-neck"></div>
 </div>
 
-<ul class="swoptions">
+<ul class="controls">
   <% ['hat', 'eye', 'mouth', 'neck'].each do |zone| %>
   <li>
     <a href="#"><%= zone.capitalize %></a>
@@ -18,3 +19,12 @@
   </li>
   <% end %>
 </ul>
+
+<div class="overlay">
+    <h1 class="screen-title">Looking good&hellip;</h1>
+    <p>We just need to add some finishing touches.</p>
+    <a class="button" href="#removeoverlay">Personalise</a>
+</div>
+<div class="mask"></div>
+
+

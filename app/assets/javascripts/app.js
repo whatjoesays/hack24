@@ -4,7 +4,7 @@ $(function($){
     $(this).toggleClass('active').siblings('.active').removeClass('active');
 
     // redraw all
-    $('.your-face').trigger('redraw');
+    $('.editor').trigger('redraw');
 
     // apply transition to destination image
     var selOffset = $(this).offset();
@@ -22,8 +22,8 @@ $(function($){
     return false;
   });
 
-  $(document).on('redraw', '.your-face', function(){
-    $('.your-face .overlay').empty();
+  $(document).on('redraw', '.editor', function(){
+    $('.editor .editor-overlay').empty();
     $('.swatch .item.active').each(function(){
       var forVal = $(this).closest('.swatch').data('for');
       var $forEl = $(forVal).html( $(this).html() );
@@ -34,7 +34,7 @@ $(function($){
     });
   });
 
-  $(document).on('click', '.swoptions > li > a', function(){
+  $(document).on('click', '.controls > li > a', function(){
     $(this).parent().toggleClass('active');
     return false;
   });
@@ -54,6 +54,12 @@ $(function($){
 
       //
     } );
+    return false;
+  });
+
+  $(document).on('click', 'a[href="#removeoverlay"]', function(){
+    $(this).closest('.overlay').fadeOut();
+    $('.mask').fadeOut();
     return false;
   });
 });
