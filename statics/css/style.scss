@@ -301,6 +301,32 @@ a {
     padding: $base-spacing;
     width: 75%;
     background: $char;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.options {
+    @include clearfix;
+    @include list-reset;
+    margin-bottom: 0;
+
+    li {
+        // float: left;
+        // width: 50%;
+    }
+
+    a {
+        display: block;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 225px;
+        height: 75px;
+    }
 }
 
 .mask {
