@@ -16,7 +16,7 @@ $body_class = 'brand';
 </div>
 
 <footer class="footer">
-    <a href="account-default.php">Cancel</a>
+    <a class="button button--subtle" href="account-default.php">Cancel</a>
 </footer>
 
 <?php include '_foot.php'; ?>

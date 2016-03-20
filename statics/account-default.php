@@ -22,7 +22,7 @@ $body_class = 'brand';
 </div>
 
 <footer class="footer">
-    <a href="account-default.php">Sign in with a different account</a>
+    <a class="button button--subtle" href="account-default.php">Sign in with a different account</a>
 </footer>
 
 <?php include '_foot.php'; ?>
