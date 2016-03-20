@@ -5,8 +5,7 @@ class LoginController < ActionController::Base
   end
 
   def design
-    data = Base64.encode64(File.read(params[:our_image].tempfile)).gsub("\n", '')
-    @uri  = "data:image/png;base64,#{data}"
+    @uri  = params[:our_image]
 
     result = recognise_face
     if result === true
@@ -19,10 +18,10 @@ class LoginController < ActionController::Base
 
   def do_save
     # check everything matches!
-    pin_matches = params[:choice][:hat] == USER_TABLE[0][:pin][0] &&
-       params[:choice][:eye] == USER_TABLE[0][:pin][1] &&
-       params[:choice][:mouth] == USER_TABLE[0][:pin][2] &&
-       params[:choice][:neck] == USER_TABLE[0][:pin][3]
+    pin_matches = params[:choice][:hat] == USER_TABLE[0][:pin][0].to_s &&
+       params[:choice][:eye] == USER_TABLE[0][:pin][1].to_s &&
+       params[:choice][:mouth] == USER_TABLE[0][:pin][2].to_s &&
+       params[:choice][:neck] == USER_TABLE[0][:pin][3].to_s
 
     if pin_matches
       render 'success'
@@ -38,7 +37,7 @@ class LoginController < ActionController::Base
     return true
 
     client = Face.get_client(api_key: ENV['FACE_KEY'], api_secret: ENV['FACE_SECRET'])
-    recognised = client.faces_recognize(uids: USER_TABLE[0][:uid], file: File.new(params[:our_image].tempfile.path, 'rb'))
+    recognised = client.faces_recognize(uids: USER_TABLE[0][:uid], file: @uri)
 
     if recognised['photos'][0]['tags'].size > 0
       if recognised['photos'][0]['tags'][0]['uids'].size > 0
