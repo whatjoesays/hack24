@@ -12,7 +12,7 @@
     <li><a href="edit-options.php">Edit - Options</a></li>
     <li><a href="edit-progress.php">Edit - Progress</a></li>
     <li><a href="edit-complete.php">Edit - Complete</a></li>
-    <li><a href="account-finalise.php">Account - Finalise</a></li>
+    <li><a href="account-confirm.php">Account - Confirm</a></li>
     <li><a href="account-done.php">Account - Done</a></li>
 </ol>
 

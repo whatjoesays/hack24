@@ -25,6 +25,14 @@ form {
     border-radius: $half-spacing;
 }
 
+.button--subtle {
+    border: 2px solid rgba($white, 0.25);
+    padding: ($half-spacing - 2px) ($base-spacing - 2px);
+    background: none;
+    color: $white;
+    font-weight: normal;
+}
+
 .icon {
     display: inline-block;
     vertical-align: middle;
@@ -57,9 +65,16 @@ body {
     background: linear-gradient(to bottom,  #c65c4f 0%,#aa405c 50%,#8e256a 100%);
     color: $white;
 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+
     &.editor {
         background: $black;
     }
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -77,17 +92,34 @@ body {
     height: 20px;
 }
 
-.back {
+.back,
+.next {
     display: none;
+    position: absolute;
+    top: 0;
+    padding: 0 $base-spacing;
+    // width: 60px;
+    height: 60px;
+    @include font-size(14px);
+    line-height: 60px;
+}
+
+.back {
+    left: 0;
+    padding-left: $half-spacing;
 
     .editor & {
         display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+    }
+}
+
+.next {
+    right: 0;
+    padding-right: $half-spacing;
+    background: $green;
+
+    .editor--done & {
+        display: block;
     }
 }
 
@@ -111,14 +143,19 @@ body {
 }
 
 .splash__logo {
-    display: inline-block;
+    display: block;
+    margin: 0 auto $half-spacing;
     width: 160px;
 }
 
 .splash__title {
-    @include font-size(24px);
+    margin: 0;
+    font-weight: bold;
+    @include font-size(36px);
+    line-height: 1;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
 }
 
 
@@ -212,12 +249,49 @@ body {
     @include font-size(14px);
 
     li {
+        position: relative;
         float: left;
         width: 25%;
-        border-right: 1px solid #333;
+        border-right: 2px solid #333;
+
+        // &:before {
+        //     left: 100%;
+        //     top: 50%;
+        //     border: solid transparent;
+        //     content: " ";
+        //     height: 0;
+        //     width: 0;
+        //     position: absolute;
+        //     pointer-events: none;
+        //     border-color: rgba(51, 51, 51, 0);
+        //     border-left-color: #333;
+        //     border-width: 10px;
+        //     margin-top: -10px;
+        // }
+
+        // &:after {
+        //     left: 100%;
+        //     top: 50%;
+        //     border: solid transparent;
+        //     content: " ";
+        //     height: 0;
+        //     width: 0;
+        //     position: absolute;
+        //     pointer-events: none;
+        //     border-color: rgba(0, 0, 0, 0);
+        //     border-left-color: #000;
+        //     border-width: 10px;
+        //     margin-top: -10px;
+        //     margin-left: -2px;
+        // }
 
         &:last-child {
             border: none;
+
+            // &:before,
+            // &:after {
+            //     display: none;
+            // }
         }
     }
 
@@ -225,6 +299,12 @@ body {
         display: block;
         padding: $base-spacing $half-spacing;
         text-decoration: none;
+    }
+
+    .icon {
+        position: absolute;
+        right: 5px;
+        top: 5px;
     }
 }
 
@@ -238,6 +318,32 @@ body {
     padding: $base-spacing;
     width: 75%;
     background: $char;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.options {
+    @include clearfix;
+    @include list-reset;
+    margin-bottom: 0;
+
+    li {
+        // float: left;
+        // width: 50%;
+    }
+
+    a {
+        display: block;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 225px;
+        height: 75px;
+    }
 }
 
 .mask {

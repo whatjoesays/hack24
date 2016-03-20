@@ -1,4 +1,30 @@
 <%= form_tag({action: :design}, {multipart: true}) do %>
-<input name="our_image" type="file" accept="image/*" id="capture" capture="camera">
-<button type=submit>SNAP</button>
+<div id="my_camera"></div>
+<script language="JavaScript">
+  Webcam.set({
+    // live preview size
+    width: 320,
+    height: 240,
+
+    // device capture size
+    dest_width: 640,
+    dest_height: 480,
+
+    // final cropped size
+    crop_width: 480,
+    crop_height: 480,
+
+    // format and quality
+    image_format: 'jpeg',
+    jpeg_quality: 90,
+
+    // flip horizontal (mirror mode)
+    flip_horiz: true
+  });
+  Webcam.attach( '#my_camera' );
+</script>
+<input name="our_image" type="hidden">
+<!--input name="our_image" type="file" accept="image/*" id="capture" capture="camera"-->
+<button id="snapphoto" type="submit">SNAP</button>
+<input type="submit" style="display:none">
 <% end %>
