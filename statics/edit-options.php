@@ -18,7 +18,7 @@ $body_class = 'editor';
 
 <div class="overlay">
     <ul class="options">
-        <li><a href="#"><img src="" alt="Cowboy"></a></li>
+        <li><a href="edit-progress.php"><img src="" alt="Cowboy"></a></li>
         <li><a href="#"><img src="" alt="Bobble"></a></li>
         <li><a href="#"><img src="" alt="Beret"></a></li>
         <li><a href="#"><img src="" alt="Baseball"></a></li>

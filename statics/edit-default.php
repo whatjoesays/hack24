@@ -10,7 +10,7 @@ $body_class = 'editor';
 </div>
 
 <ul class="controls">
-    <li><a href="#">Head</a></li>
+    <li><a href="edit-options.php">Head</a></li>
     <li><a href="#">Eyes</a></li>
     <li><a href="#">Mouth</a></li>
     <li><a href="#">Neck</a></li>

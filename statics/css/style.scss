@@ -27,7 +27,7 @@ form {
 
 .button--subtle {
     border: 2px solid rgba($white, 0.25);
-    padding: ($half-spacing - 2px) ($base-spacing - 2px);
+    padding: ($half-spacing / 2 - 2px) ($base-spacing / 2 - 2px);
     background: none;
     color: $white;
     font-weight: normal;
@@ -128,7 +128,7 @@ a {
 
 .footer {
     position: fixed;
-    padding: $base-spacing;
+    padding: 0 $base-spacing $base-spacing;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -162,17 +162,22 @@ a {
 // Content
 
 .content {
-    padding: $base-spacing;
+    padding: 0 $base-spacing;
 }
 
 
 // Account
 
 .account {
+    margin-bottom: $base-spacing;
     // border: 2px solid rgba($black, 0.25);
     // padding: $base-spacing;
     text-align: center;
     // border-radius: $half-spacing;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
 }
 
 .account__photo {
@@ -212,8 +217,13 @@ a {
 }
 
 .account__id {
-    margin-bottom: 0;
-    @include font-size(18px);
+    margin-bottom: $half-spacing;
+    @include font-size(14px);
+    font-family: $mono;
+}
+
+.account__actions {
+
 }
 
 
