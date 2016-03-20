@@ -92,17 +92,34 @@ a {
     height: 20px;
 }
 
-.back {
+.back,
+.next {
     display: none;
+    position: absolute;
+    top: 0;
+    padding: 0 $base-spacing;
+    // width: 60px;
+    height: 60px;
+    @include font-size(14px);
+    line-height: 60px;
+}
+
+.back {
+    left: 0;
+    padding-left: $half-spacing;
 
     .editor & {
         display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
+    }
+}
+
+.next {
+    right: 0;
+    padding-right: $half-spacing;
+    background: $green;
+
+    .editor--done & {
+        display: block;
     }
 }
 
