@@ -114,3 +114,51 @@ body.home .header {
 .photo__image {
   height: auto;
 }
+
+.editor-photo {
+  overflow: hidden;
+}
+
+.editor-photo .editor-overlay img {
+  width: 81%;
+}
+
+.editor-photo .overlay-hat img {
+    width: 81%;
+    transition: all 1000ms;
+    position: absolute;
+    bottom: -249%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.editor-photo .overlay-eye img {
+    width: 78%;
+    transition: all 1000ms;
+    position: absolute;
+    bottom: -316%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.editor-photo .overlay-mouth img {
+    width: 73%;
+    transition: all 1000ms;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.editor-overlay.overlay-neck {
+  top: 0;
+}
+
+.editor-photo .overlay-neck img {
+    width: 100%;
+    transition: all 1000ms;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
