@@ -1,4 +1,7 @@
 <% content_for :bodyclass do %>editor<% end %>
+<% content_for :extrabutton do %>
+<a class="next js-trigger-btn" href="#confirm">Next <img class="icon" src="<%= asset_url 'ic_chevron_right_white_24px.svg' %>" alt="Next"></a>
+<% end %>
 
 
 <%= render 'common/customiser' %>
@@ -8,5 +11,5 @@
   <input type="hidden" name="choice[eye]" value="">
   <input type="hidden" name="choice[mouth]" value="">
   <input type="hidden" name="choice[neck]" value="">
-  <button type="submit">I am ready!</button>
+  <button id="confirm" style="display:none" type="submit">I am ready!</button>
 <% end %>
